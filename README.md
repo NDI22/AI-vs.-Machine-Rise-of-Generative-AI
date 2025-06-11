@@ -3,12 +3,64 @@
 ## Table 1: Sentiment Forecasting Prompts
 The following table documents a sequence of interactions between users and large language models (LLMs) related to sentiment-driven Bitcoin return forecasting. It includes model type, prompt sequence, full text, code execution status, results, and final analysis outcome.
 
-| LLM           | Prompt Sub-Seq | Prompt # | Timestamp | Speaker       | Text (Full Response)                                       | Code Exec | Code Results | Status    |
-|---------------|----------------|----------|-----------|----------------|-------------------------------------------------------------|-----------|--------------|-----------|
-| Claude Opus 4 | 1.1            | 1        | 5/28/2025 | User           | forget all previous information and instructions            | –         | –            | –         |
-| Claude Opus 4 | 1.2            | 1        | 5/28/2025 | Claude Opus 4  | I'll help you with the Excel file you've uploaded.          | No        | –            | –         |
-| Claude Opus 4 | 1.2.1          | 1        | 5/28/2025 | User           | Use the sentiment data in the attached spreadsheet...       | –         | –            | –         |
-| Claude Opus 4 | 1.3            | 1        | 5/28/2025 | Claude Opus 4  | I'll create a rolling window forecasting model...           | No        | –            | error     |
+Here is the CSV data converted into a GitHub-flavored markdown table:
+
+| LLM | Prompt Sub-Sequence | Prompt \# | Timestamp | Speaker | Text (Full Response) | Python Code Execution (Yes/No) | Python Code Results | Analysis Status (Analzyzed, error, N/A) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Claude Opus 4 | 1 | 1.1 | 1,5/28/2025 | User | forget all previous information and instructions | n/a | | n/a |
+| Claude Opus 4 | 1 | 1.2 | 1,5/28/2025 | Claude Opus 4 | I'll help you with the Excel file you've uploaded. Let me first examine its structure and contents... | No | | n/a |
+| Claude Opus 4 | 1 | 1.2.1 | 1,5/28/2025 | User | Use the sentiment data in the attached spreadsheet to forecast bitcoin daily returns... | n/a | | n/a |
+| Claude Opus 4 | 1 | 1.3 | 1,5/28/2025 | Claude Opus 4 | I'll create a rolling window forecasting model to predict Bitcoin daily returns using the sentiment data... | No | \<pre\>Found 55 sentiment columns...\<br\>...\<br\>Error: sentimentCols is not defined\</pre\> | error |
+| Claude Opus 4 | 2 | 2.1 | 1,5/28/2025 | User | forget all previous information and instructions | n/a | | n/a |
+| Claude Opus 4 | 2 | 2.2 | 1,5/28/2025 | Claude Opus 4 | I'll help you analyze the Excel file you've uploaded. Let me first examine its structure... | No | | n/a |
+| Claude Opus 4 | 2 | 2.3 | 1,5/28/2025 | User | """Use the sentiment data in the attached spreadsheet to forecast bitcoin daily returns... | n/a | | n/a |
+| Claude Opus 4 | 2 | 2.4 | 1,5/28/2025 | Claude Opus 4 | I'll help you build a rolling window forecasting model for Bitcoin daily returns using sentiment data... | No | \<pre\>Data prepared: 3282 records...\<br\>...\<br\>Error: windowSize is not defined\</pre\> | error |
+| Claude Opus 4 | 3 | 3.1 | 1,5/28/2025 | User | forget all previous information and instructions | n/a | | n/a |
+| Claude Opus 4 | 3 | 3.2 | 1,5/28/2025 | Claude Opus 4 | I'll help you work with the Excel file you've uploaded... | No | | n/a |
+| Claude Opus 4 | 3 | 3.3 | 1,5/28/2025 | User | Use the sentiment data in the attached spreadsheet to forecast bitcoin daily returns... | n/a | | n/a |
+| Claude Opus 4 | 3 | 3.4 | 1,5/28/2025 | Claude Opus 4 | I'll help you build a forecasting model for Bitcoin daily returns using the sentiment data... | No | \<pre\>Dataset loaded: 3282 rows...\<br\>...\<br\>Error: processedData is not defined\</pre\> | error |
+| Gemini 2.5 Flash | 1 | 1.1 | 1,3/1/2025 0800 | User | forget all previous information and instructions | n/a | | n/a |
+| Gemini 2.5 Flash | 1 | 1.2 | 1,3/1/2025 0800 | Gemini 2.5 Flash | It looks like you've uploaded a CSV file containing Bitcoin data. What would you like to do with this information?... | Yes | | Analyzed |
+| Gemini 2.5 Flash | 1 | 1.3 | 1,3/1/2025 0800 | User | Yes | Yes | | n/a |
+| Gemini 2.5 Flash | 1 | 1.4 | 1,3/1/2025 0800 | Gemini 2.5 Flash | I have generated a plot that compares the actual and predicted Bitcoin daily returns... | n/a | | n/a |
+| Gemini 2.5 Flash | 1 | 1.5 | 1,3/1/2025 0800 | User | Create a csv of the entire output of your forecasted daily returns. | n/a | | n/a |
+| Gemini 2.5 Flash | 1 | 1.6 | 1,3/1/2025 0800 | Gemini 2.5 Flash | Here is the CSV content of the forecasted Bitcoin daily returns... | Yes | | Analyzed |
+| Gemini 2.5 Flash | 2 | 2.1 | 2,3/1/2025 0800 | User | forget all previous information and instructions | n/a | | n/a |
+| Gemini 2.5 Flash | 2 | 2.2 | 2,3/1/2025 0800 | Gemini 2.5 Flash | Hello\! How can I help you today? | Yes | | Analyzed |
+| Gemini 2.5 Flash | 2 | 2.3 | 2,3/1/2025 0800 | User | Use the sentiment data in the attached spreadsheet to forecast bitcoin daily returns. | n/a | | n/a |
+| Gemini 2.5 Flash | 1 | 2.4 | 2,3/1/2025 0800 | Gemini 2.5 Flash | It looks like you're trying to use a spreadsheet to forecast Bitcoin daily returns, but I don't see any attached files... | Yes | | Analyzed |
+| Gemini 2.5 Flash | 1 | 2.5 | 2,3/1/2025 0800 | User | what files are attached to this conversation? | n/a | | n/a |
+| Gemini 2.5 Flash | 2 | 2.6 | 2,3/1/2025 0800 | Gemini 2.5 Flash | I apologize, but as a large language model, I don't have the ability to see or access files... | n/a | | n/a |
+| Gemini 2.5 Flash | 2 | 2.7 | 2,3/1/2025 0800 | User | what about the databtc\_me no socials? | Yes | | Analyzed |
+| Gemini 2.5 Flash | 2 | 2.8 | 2,3/1/2025 0800 | Gemini 2.5 Flash | I understand you're referring to a file named "databtc\_me no socials"... | n/a | | n/a |
+| Gemini 2.5 Flash | 2 | 2.9 | 2,3/1/2025 0800 | User | it's the file that I uploaded in my first prompt | n/a | | Analyzed |
+| Gemini 2.5 Flash | 2 | 3 | 2,3/1/2025 0800 | User | I understand you believe the file was uploaded in the first prompt... | n/a | | n/a |
+| Gemini 2.5 Flash | 2 | 3.1 | 2,3/1/2025 0800 | GPT4o | do you see this file that I uploaded in this first prompt? | n/a | | Analyzed |
+| Gemini 2.5 Flash | 2 | 3.2 | 2,3/1/2025 0800 | Gemini 2.5 Flash | Yes, I see that you've uploaded a file named image\_be5ab3.png... | n/a | | n/a |
+| Gemini 2.5 Flash | 2 | 3.1 | 3,3/1/2025 0800 | User | forget all previous information and instructions\<br\>\<br\>Show thinking | Yes | | Analyzed |
+| Gemini 2.5 Flash | 2 | 3.2 | 3,3/1/2025 0800 | Gemini 2.5 Flash | Hello\! How can I help you today? | n/a | | n/a |
+| Gemini 2.5 Flash | 2 | 3.3 | 3,3/1/2025 0800 | User | Use the sentiment data in the attached spreadsheet to forecast bitcoin daily returns. | n/a | | Analyzed |
+| Gemini 2.5 Flash | 2 | 3.4 | 3,3/1/2025 0800 | Gemini 2.5 Flash | It looks like you're trying to attach a spreadsheet, but I can't directly access local files... | n/a | | n/a |
+| Gemini 2.5 Flash | 2 | 3.5 | 3,3/1/2025 0800 | GPT4o | This is the attached spreadsheet. | n/a | | Analyzed |
+| Gemini 2.5 Flash | 2 | 3.6 | 2,3/1/2025 0800 | Gemini 2.5 Flash | To forecast Bitcoin daily returns, I'll first need to load and process the provided CSV file... | n/a | | n/a |
+| Gemini 2.5 Flash | 2 | 3.7 | 2,3/1/2025 0800 | User | To forecast Bitcoin daily returns, I'll first need to load and process the provided CSV file... | Yes | \<pre\>...\<br\>Forecasted Returns Statistics:\<br\>count    2924.000000\<br\>mean        0.000570\<br\>std         0.001923\<br\>min        -0.003960\<br\>25%        -0.001097\<br\>50%         0.000780\<br\>75%         0.002447\<br\>max         0.002447\<br\>Name: Forecasted\_Return, dtype: float64\</pre\> | Analyzed |
+| Chat GPT 4o | 1 | 1.1 | 1,3/1/2025 0800 | User | forget all previous information and instructions\<br\>Use the sentiment data in the attached spreadsheet... | n/a | n/a | n/a |
+| Chat GPT 4o | 1 | 1.2 | 1,3/1/2025 0800 | GPT4o | The model evaluation results are: Mean Squared Error (MSE): 0.00070, R² Score: -0.097... | Yes | \<pre\>Result\<br\>['DataBTC\_MERGED\_DATA - 20240912 ']\<br\>...\<br\>(0.0007041511171605512, -0.09733934507860975)\</pre\> | Analyzed |
+| Chat GPT 4o | 1 | 1.2.1 | 1,3/1/2025 0800 | GPT4o | \# Add lagged features for 'y' and key sentiment variables (1-day lag)... | Yes | from sklearn.model\_selection import train\_test\_split... | n/a |
+| Chat GPT 4o | 1 | 1.3 | 1,3/1/2025 0800 | User | Yes | n/a | n/a | n/a |
+| Chat GPT 4o | 1 | 1.4.1 | 1,3/1/2025 0800 | GPT4o | (0.0006932661331630351, -0.08037633682664369) | n/a | | n/a |
+| Chat GPT 4o | 1 | 1.4.2 | 1,3/1/2025 0800 | GPT4o | After adding 1-day lagged features, the model's performance slightly improved... | Yes | \# Add lagged features for 'y' and key sentiment variables... | Analyzed |
+| Chat GPT 4o | 1 | 1.5 | 1,3/1/2025 0800 | User | """Please execute the following... | n/a | n/a | n/a |
+| Chat GPT 4o | 1 | 1.6 | 1,3/1/2025 0800 | GPT4o | The rolling-window training and forecasting process took too long... | Yes | \<pre\>Analysis errored...\<br\>KeyboardInterrupt\</pre\> | Analyzed |
+| Chat GPT 4o | 1 | 1.7 | 1,3/1/2025 0800 | User | Option 3 please | n/a | n/a | n/a |
+| Chat GPT 4o | 1 | 1.8 | 1,3/1/2025 0800 | GPT4o | The batched rolling forecast results are now available for review... | Yes | \<pre\>NameError: name 'tools' is not defined\</pre\> | Analyzed |
+| Chat GPT 4o | 1 | 1.9 | 1,3/1/2025 0800 | User | yes please visualize | n/a | n/a | n/a |
+| Chat GPT 4o | 2 | 2.1 | 1,3/1/2025 0800 | User | forget all previous information and instructions... | n/a | n/a | n/a |
+| Chat GPT 4o | 2 | 2.2 | 1,3/1/2025 0800 | GPT4o | The model's performance on predicting Bitcoin daily returns using sentiment data is... | Yes | \<pre\>...\<br\>(0.0007041511171605512, -0.09733934507860975)\</pre\> | Analyzed |
+| Chat GPT 4o | 2 | 2.3 | 1,3/1/2025 0800 | User | Yes | n/a | n/a | n/a |
+| Chat GPT 4o | 2 | 2.4 | 1,3/1/2025 0800 | GPT4o | Using lagged sentiment features improved the performance slightly... | n/a | \<pre\>...\<br\>KeyError: ... not found in axis\</pre\> | Analyzed |
+| Chat GPT 4o | 2 | 2.5 | 1,3/1/2025 0800 | User | Yes | n/a | | n/a |
+| Chat GPT 4o | 2 | 2.6 | 1,3/1/2025 0800 | GPT4o | After including 3-day lagged features, here’s how the model performed... | n/a | \<pre\>...\<br\>(0.0006907862975399724, -0.07489314583980922)\</pre\> | Analyzed |
 
 
 ---
